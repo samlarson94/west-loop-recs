@@ -1,16 +1,11 @@
-# west-loop-rex
+# west loop rex 🦖
 
-Brought to you by:
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMW0kxxxkkxxkkXMXOxkkkk0WXkxx0NMMMMMMMMMMMM
-MMMMMMMMMWOc,,,,...'oXXd;,'..'xXx;..:KMMMMWWWMMMMM
-MMMMMMMMMMMNNNXx,.;OWMWNXKd..oNWNKl.:KMMNOooKMMMMM
-MMMMMMMMMMMMMXd'.lKMMMMM0o;.lXMMMWKk0NXd;..;0MMMMM
-MMMMMMMMMMMW0:..,lddd0WK:..:KMMXxoookNk'...;0MMMMM
-MMMMMMMMMMMKo::::,..;0Xl..,OMMMKl:'.;KO,...;0MMMMM
-MMMMMMMMMMMMWWWWXo.'kNd.':kWMMMMWXl.;KW0d;.;0MMMMM
-MMMMMMMWNNNNNNNXd'.dNx'.o0KNNNNNN0:.cXMMMN0OXMMMMM
-MMMMMMXo;,,;;,;,.,dNO,..';,,;,;;,''c0WMMMMMMMMMMMM
-MMMMMWKkxxkxxxxkOXWWKkxxxxxxxkxxkk0NMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+A lightweight Django App that renders our reccomendations for what to eat and do around our apartment. 
+
+Accessed through endpoint or QR-code posted on our wall for guests. 
+
+Admin panel used for quick and easy updates. Google Maps used to display places on a map interface.
+
+## Usage
+
 
