@@ -1,10 +1,10 @@
 # west loop rex 🦖
 
-A lightweight Django App that renders our reccomendations for what to eat and do around our apartment. 
+A lightweight Django app used to store and share recommendations for places around our apartment.
 
-Accessed through endpoint or QR-code posted on our wall for guests. 
+A QR code will be posted in our apartment for guests to access.
 
-Admin panel used for quick and easy updates. Google Maps used to display places on a map interface.
+An admin panel is included for making quick and easy updates. Google Maps API used to display places on a map interface.
 
 ## Usage
 
