@@ -1,3 +1,14 @@
 from django.shortcuts import render
+from django.shortcuts import render
+from .models import Brewery
+from . import config
 
-# Create your views here.
+def brewery_map(request):
+    breweries = Brewery.objects.all()
+    print(breweries, type(breweries))
+    context = {
+        'breweries': breweries,
+        'api_key': config.API_KEY
+    }
+    return render(request, 'brewery_map/brewery_map.html', context)
+
