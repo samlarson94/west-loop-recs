@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render
 from .models import Brewery
-from . import config
+from brewery_map_project import config
 
 def brewery_map(request):
     breweries = Brewery.objects.all()

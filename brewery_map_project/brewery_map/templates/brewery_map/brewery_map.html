@@ -2,9 +2,13 @@
 <html>
 <head>
     <title>Brewery Map</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=initMap" async defer></script>
+    
+ 
+    <script src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap" async defer></script>
 </head>
 <body>
+    <div class="custom-marker">
+       
     <div id="map" style="height: 400px;"></div>
     <script>
         function initMap() {
@@ -17,12 +21,27 @@
             var breweries = [
                 {% for brewery in breweries %}
                 {
-                    position: { lat: {{ brewery.latitude }}, lng: {{ brewery.longitude }} },
+                    position: { lat: 41.8781, lng: -87.6298 },
+                    title: "junk data",
+                    address: "junk data",
+                    currentHours: "brewery.current_hours",
+                    fullHours: "brewery.full_hours"
+                },
+                {
+                    position: { lat: 41.9445, lng: -87.6554  },
+                    title: "junk data",
+                    address: "junk data",
+                    currentHours: "brewery.current_hours",
+                    fullHours: "brewery.full_hours"
+                },
+
+                {% comment %} {
+                    {% comment %} position: { lat: {{ brewery.latitude }}, lng: {{ brewery.longitude }} },
                     title: "{{ brewery.name }}",
                     address: "{{ brewery.address }}",
                     currentHours: "{{ brewery.current_hours }}",
                     fullHours: "{{ brewery.full_hours }}"
-                },
+                }, {% endcomment %}
                 {% endfor %}
             ];
 
@@ -51,5 +70,6 @@
             });
         }
     </script>
+    <div class="custom-marker">
 </body>
 </html>
