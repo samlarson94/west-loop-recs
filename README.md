@@ -1,5 +1,5 @@
 # west loop rex 🦖
-                              
+
 A lightweight Django app used to store and share local recommendations.
 
 Post some QR codes around for easy access. 
