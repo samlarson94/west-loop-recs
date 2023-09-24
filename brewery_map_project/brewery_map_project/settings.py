@@ -129,3 +129,9 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Google Maps Feature
+GEOCODER_PROVIDER = 'geopy.geocoders.GoogleV3'
+GOOGLE_MAPS_API_KEY = 'config.API_KEY'
+GEOCODER_API_KEY = GOOGLE_MAPS_API_KEY
+
+

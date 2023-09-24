@@ -9,7 +9,7 @@
     {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'brewery_map/styles.css' %}"> {% endcomment %}
     <link rel="stylesheet" href="{% static 'brewery_map/styles.css' %}">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_API_KEY}}&callback=initMap" async defer></script>
 </head>
 <body>
     {% block bootstrap5_content %}
@@ -17,7 +17,7 @@
     {% comment %} <div class="custom-marker"> {% endcomment %}
 <div class="container-fluid title">
     <div class="row justify-content-center" style="text-align: center;">
-        <h1>West Loop Rex</h1>
+        <h1 class="main-title"> West Loop Rex 🦖</h1>
         <h4>Sam and Elisa's favorite spots within walking distance.</h4>
     </div>
 </div>
@@ -46,12 +46,11 @@
                 {% endif %}
                 </li>
             </ul>
-            <div class="card-body">
+            <div class="card-body" style="display: flex; justify-content: space-around;">
               <a href="{{ brewery.yelp }}" class="card-link" target="_blank">Read Yelp Reviews</a>
-              <a href="#" class="card-link">Directions</a>
+              <a href="{% url 'get_directions' brewery.address %}" target="_blank">Get Directions</a>
             </div>
           </div>
-        {% comment %} <p> {{ brewery.title }} </p> {% endcomment %}
         {% endfor %}
     {% endblock %}
         </div>
