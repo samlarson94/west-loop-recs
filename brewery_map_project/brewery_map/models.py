@@ -12,6 +12,7 @@ class Brewery(models.Model):
     e_rating = models.DecimalField(max_digits=3, decimal_places=0, default=00)
     knownfor = models.CharField(max_length=100, default='unspecified')
     patio = models.BooleanField(default=False)
+    yelp = models.URLField(max_length=200, default="https://www.yelp.com/")
     
     def __str__(self):
         return self.name
