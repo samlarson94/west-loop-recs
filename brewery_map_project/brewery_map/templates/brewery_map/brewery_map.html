@@ -1,21 +1,30 @@
 {% load bootstrap5 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Brewery Map</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'brewery_map/styles.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'brewery_map/styles.css' %}">
+
     <script src="https://maps.googleapis.com/maps/api/js?key={{API_KEY}}&callback=initMap" async defer></script>
 </head>
 <body>
     {% block bootstrap5_content %}
  {% comment %} <div id="map" style="height: 400px;"></div> {% endcomment %}
     {% comment %} <div class="custom-marker"> {% endcomment %}
-    <title>West Town Pub Crawl Rex"</title>
-        <h1>Sam and Elisa's favorite spots within walking distance.</h1>
-        <div class="container-fluid">	
-            <div class="row justify-content-center">
-                <div class="col-md-6 mx-auto">
+<div class="container-fluid title">
+    <div class="row justify-content-center" style="text-align: center;">
+        <h1>West Loop Rex</h1>
+        <h4>Sam and Elisa's favorite spots within walking distance.</h4>
+    </div>
+</div>
+
+ <div class="container-fluid">	
+    <div class="row justify-content-center">
+        <div class="col-md-6 mx-auto">
 
         {% for brewery in breweries %}
         <div class="card" style="width: 500px; margin:15px auto;">

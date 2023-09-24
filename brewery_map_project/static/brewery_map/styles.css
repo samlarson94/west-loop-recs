@@ -1,0 +1,14 @@
+
+body {
+    background-image: url('/static/lofi-background.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.title {
+    color: white;
+}
+
+
+
