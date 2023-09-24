@@ -9,35 +9,45 @@
 </head>
 <body>
     {% block bootstrap5_content %}
-
-
-       
-    <div id="map" style="height: 400px;"></div>
-
+    {% comment %} <div id="map" style="height: 400px;"></div> {% endcomment %}
     <div class="custom-marker">
         <title>West Town Pub Crawl Rex"</title>
         <h1>Sam and Elisa's favorite spots within walking distance.</h1>
-        <h3>Allow us to be your Guide</h3>
+        <div class="container-fluid">	
+            <div class="row justify-content-center">
+                <div class="col-md-6 mx-auto"">
+
         {% for brewery in breweries %}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card" style="width: 500px; margin:15px auto;">
+            {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
             <div class="card-body">
-              <h5 class="card-title">{{ brewery.title }}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h3 class="card-title"> {{ brewery.name }}</h3>
+              <h5 class="card-title"> {{ brewery.neighborhood }}</h5>
+              <p class="card-text">{{ brewery.address }}</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Known For: {{ brewery.knownfor }}</li>
+              <li class="list-group-item">Sam Rating: {{ brewery.s_rating }}</li>
+              <li class="list-group-item">Elisa Rating: {{ brewery.e_rating}}</li>
+              <li class="list-group-item">Patio: 
+                {% if brewery.patio == True %}
+                    Yes
+                {% else %}
+                    No 
+                {% endif %}
+                </li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a href="#" class="card-link">Read Yelp Reviews</a>
+              <a href="#" class="card-link">Directions</a>
             </div>
           </div>
-        <p> {{ brewery.title }} </p>
+        {% comment %} <p> {{ brewery.title }} </p> {% endcomment %}
         {% endfor %}
     {% endblock %}
+        </div>
+    </div>
+
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -49,16 +59,10 @@
             var breweries = [
                 {% for brewery in breweries %}
                 {
-                    position: { lat: 41.8781, lng: -87.6298 },
-                    title: "junk data",
-                    address: "junk data",
-                    currentHours: "brewery.current_hours",
-                    fullHours: "brewery.full_hours",
-                    sRating: "brewery.s_rating",
-                    eRating: "brewery.e_rating",
+                    name: {{ brewery.name }},
+                    address: "XYZ",
+
                 },
-                {
-                    position: { lat: 41.9445, lng: -87.6554  },
                     title: "junk data",
                     address: "junk data",
                     currentHours: "brewery.current_hours",
