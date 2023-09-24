@@ -9,13 +9,13 @@
 </head>
 <body>
     {% block bootstrap5_content %}
-    {% comment %} <div id="map" style="height: 400px;"></div> {% endcomment %}
-    <div class="custom-marker">
-        <title>West Town Pub Crawl Rex"</title>
+ {% comment %} <div id="map" style="height: 400px;"></div> {% endcomment %}
+    {% comment %} <div class="custom-marker"> {% endcomment %}
+    <title>West Town Pub Crawl Rex"</title>
         <h1>Sam and Elisa's favorite spots within walking distance.</h1>
         <div class="container-fluid">	
             <div class="row justify-content-center">
-                <div class="col-md-6 mx-auto"">
+                <div class="col-md-6 mx-auto">
 
         {% for brewery in breweries %}
         <div class="card" style="width: 500px; margin:15px auto;">
@@ -47,6 +47,7 @@
     {% endblock %}
         </div>
     </div>
+</div>
 
     <script>
         function initMap() {
@@ -60,7 +61,7 @@
                 {% for brewery in breweries %}
                 {
                     name: {{ brewery.name }},
-                    address: "XYZ",
+                    address: {{ brewery.address }},
 
                 },
                     title: "junk data",
@@ -69,13 +70,6 @@
                     fullHours: "brewery.full_hours"
                 },
 
-                {% comment %} {
-                    {% comment %} position: { lat: {{ brewery.latitude }}, lng: {{ brewery.longitude }} },
-                    title: "{{ brewery.name }}",
-                    address: "{{ brewery.address }}",
-                    currentHours: "{{ brewery.current_hours }}",
-                    fullHours: "{{ brewery.full_hours }}"
-                }, {% endcomment %}
                 {% endfor %}
             ];
 
