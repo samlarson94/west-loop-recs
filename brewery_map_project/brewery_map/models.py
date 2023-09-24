@@ -13,6 +13,29 @@ class Brewery(models.Model):
     knownfor = models.CharField(max_length=100, default='unspecified')
     patio = models.BooleanField(default=False)
     yelp = models.URLField(max_length=200, default="https://www.yelp.com/")
-    
+    category = models.CharField(max_length=20, choices=[
+        ("Coffee/Work/Reading", 'Coffee/Work/Reading'), 
+        ('Quick Eats', 'Quick Eats'), 
+        ('Cocktails', 'Cocktails'),
+        ('Fancy Dinner', 'Fancy Dinner'),
+        ('Casual Dinner', 'Casual Dinner'),
+        ('Pub', 'Pub'),
+        ('Brewery', 'Brewery'),
+        ('Brunch', 'Brunch'),
+        ],
+        default="undefined")
+    subcategory = models.CharField(max_length=20, choices=[
+        ('Mediterranean', 'Mediterranean'),
+        ('Italian', 'Italian'),
+        ('American', 'American'),
+        ('Live Music', 'Live Music'),
+        ('Funky', 'Funky'),
+        ('Lots of Options', 'Lots of Options'),
+        ('Cool Experience', 'Cool Experience'),
+        ('N/A', 'N/A')
+        ],
+        default="undefined")
+
+
     def __str__(self):
         return self.name

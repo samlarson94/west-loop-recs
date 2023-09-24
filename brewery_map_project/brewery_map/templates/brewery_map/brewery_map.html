@@ -33,6 +33,11 @@
               <h3 class="card-title"> {{ brewery.name }}</h3>
               <h5 class="card-title"> {{ brewery.neighborhood }}</h5>
               <p class="card-text">{{ brewery.address }}</p>
+              <p class="card-text">{{ brewery.category }}
+                {% if brewery.subcategory != 'N/A' %}
+                  ||  {{brewery.subcategory }}
+                {% endif %} 
+            </p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Known For: {{ brewery.knownfor }}</li>
