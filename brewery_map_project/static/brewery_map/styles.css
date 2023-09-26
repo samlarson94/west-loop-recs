@@ -4,10 +4,12 @@ body {
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed; 
+    padding: 10px;
 }
 
 .title {
     color: white;
+    font-weight: bold;
 }
 
 .main-title {
