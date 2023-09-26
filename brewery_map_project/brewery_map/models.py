@@ -14,14 +14,14 @@ class Brewery(models.Model):
     patio = models.BooleanField(default=False)
     yelp = models.URLField(max_length=200, default="https://www.yelp.com/")
     category = models.CharField(max_length=20, choices=[
-        ("Coffee/Work/Reading", 'Coffee/Work/Reading'), 
+        ("Cafe", 'Cafe'), 
         ('Quick Eats', 'Quick Eats'), 
-        ('Cocktails', 'Cocktails'),
-        ('Fancy Dinner', 'Fancy Dinner'),
-        ('Casual Dinner', 'Casual Dinner'),
-        ('Pub', 'Pub'),
-        ('Brewery', 'Brewery'),
-        ('Brunch', 'Brunch'),
+        ('Cocktails 🍸', 'Cocktails 🍸'),
+        ('Fancy Dinner 🍽️', 'Fancy Dinner 🍽️'),
+        ('Casual Dinner 🍴', 'Casual Dinner 🍴'),
+        ('Pub 🍺', 'Pub 🍺'),
+        ('Brewery 🍺', 'Brewery 🍺'),
+        ('Brunch 🍳', 'Brunch 🍳'),
         ],
         default="undefined")
     subcategory = models.CharField(max_length=20, choices=[

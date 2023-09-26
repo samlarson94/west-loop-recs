@@ -12,6 +12,12 @@ body {
     font-weight: bold;
 }
 
+.art-title {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
 .main-title {
     margin-top: 20px;
 }
