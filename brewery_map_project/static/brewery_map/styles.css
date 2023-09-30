@@ -63,6 +63,7 @@ pre {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     background-color: #fff; 
     margin: 10px auto;
+    width: 40vw;
 }
 
 .card:hover {
@@ -98,8 +99,8 @@ button {
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 2px;
-    color: black;
-    border: 2px black solid;
+    color: white;
+    border: 2px white solid;
     border-radius: 4px;
     text-transform: uppercase;
     outline: 0;
@@ -184,3 +185,14 @@ button {
 
   }
 
+.known-for {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+    .card {
+        width: 67vw;
+    }
+}
