@@ -233,6 +233,11 @@ button {
     border: none;
 }
 
+footer {
+    color: white;
+    text-align: center;
+}
+
 @media only screen and (max-width: 900px) {
     .card {
         width: 67vw;
