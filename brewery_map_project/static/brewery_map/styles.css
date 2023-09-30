@@ -5,11 +5,16 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
     padding: 10px;
+    grid-template-rows: minmax(2.5rem, 12vmin) 1fr 5rem;
 }
+pre {
+    font-size: max(0.2rem, 1vmin);
+   }
 
 .title {
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
 .art-title {
@@ -20,7 +25,10 @@ body {
 
 .main-title {
     margin-top: 20px;
+
 }
+
+
 
 
 
