@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'VT323';
-    src: url('/static/VT323-Regular.ttf') format('ttf');
+    src: url('/static/VT323-Regular.ttf') format('truetype');
 }
 
 .retro-font {
@@ -38,6 +38,19 @@ pre {
 .title {
     color: white;
     font-weight: bold;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 2.25rem;
+}
+
+.btntxt {
+    font-size: 1.25rem;
+}
+
+.direction-text {
+    font-size: .6rem;
     text-align: center;
 }
 
@@ -96,8 +109,6 @@ button {
     width: 150px;
     margin: 10px 7px;
     padding: 5px 5px;
-    font-weight: 700;
-    font-size: 15px;
     letter-spacing: 2px;
     color: white;
     border: 2px white solid;
@@ -190,6 +201,31 @@ button {
     font-style: italic;
     margin-bottom: 5px;
 }
+
+.directions-btn {
+    position: relative;
+    display:block;
+    text-align: center;
+    height: 55px;
+    width: 200px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    letter-spacing: 2px;
+    color: black;
+    border: 2px black solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    text-decoration: none;
+  }
 
 @media only screen and (max-width: 900px) {
     .card {

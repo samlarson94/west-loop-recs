@@ -29,19 +29,19 @@
         </pre>
     </div>
     </div>
-    <div class="row justify-content-center">
-        <h4>Sam and Elisa's favorite spots within walking distance.</h4>
+    <div class="row justify-content-center subtitle">
+        <h4 class="retro-font subtitle">Sam and Elisa's favorite spots within walking distance.</h4>
     </div>
 </div>
 
 <div class="container-fluid card-container">
-    <div class="filter-options retro-font">
+    <div class="filter-options retro-font btntxt">
         <button class="fill">Breakfast</button>
-        <button class="svg">Brunch</button>
+        <button class="fill">Brunch</button>
         <button class="fill">Lunch</button>
-        <button class="svg">Dinner</button>
+        <button class="fill">Dinner</button>
         <button class="fill">Pub/Brewery</button>
-        <button class="svg">Nightlife</button>
+        <button class="fill">Nightlife</button>
     </div>
 </div>
 
@@ -63,7 +63,7 @@
               </span>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item known-for">{{ brewery.knownfor }}</li>
+              <li class="list-group-item known-for">"{{ brewery.knownfor }}"</li>
               <li class="list-group-item">Sam Rating: {{ brewery.s_rating }}</li>
               <li class="list-group-item">Elisa Rating: {{ brewery.e_rating}}</li>
               <li class="list-group-item">Patio: 
@@ -74,6 +74,10 @@
                 {% endif %}
                 </li>
             </ul>
+              {% comment %} <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="button">Button</button>
+                <button class="btn btn-primary" type="button">Button</button>
+            </div> {% endcomment %}
             <div class="card-body" style="display: flex; justify-content: space-around;">
               <a href="{{ brewery.yelp }}" class="card-link" target="_blank">Read Yelp Reviews</a>
               <a href="{% url 'get_directions' brewery.address %}" target="_blank">Get Directions</a>
