@@ -41,7 +41,7 @@
         <button class="fill">Lunch</button>
         <button class="fill">Dinner</button>
         <button class="fill">Pub/Brewery</button>
-        <button class="fill">Nightlife</button>
+        <button class="fill">Pub</button>
     </div>
 </div>
 
@@ -49,7 +49,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mx-auto">
         {% for brewery in breweries %}
-        <div class="card">
+        <div class="card" data-category="{{ brewery.category }}">
             {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
             <div class="card-body">
               <h3 class="card-title"> {{ brewery.name }}</h3>
@@ -90,16 +90,44 @@
 </div>
 
 <footer>
-    yolo lol
+    footer here yolo lol
 </footer>
 
     <script>
         window.onload = function () {
-            const art = document.querySelector('.ascii-art');
-            asciiArt.classList.add('animate-fade-in');
+            const asciiArt = document.querySelector('.ascii-art');
+            const categoryButtons = document.querySelectorAll('.filter-options button');
+            const cards = document.querySelectorAll('.card');
+
+            // Fade in the ascii art
+            if (asciiArt) {
+                asciiArt.classList.add('animate-fade-in');
+            }
+
+            // Filtering Logic 
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log('clicked');
+                    const selectedCategory = button.textContent.toLowerCase();
+                    
+                    // Toggle the active class for the clicked button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Show/hide cards based on the selected category
+                    cards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category').toLowerCase();
+                        if (cardCategory === selectedCategory) {
+                            card.style.display = 'block'; // Show the card
+                        } else {
+                            card.style.display = 'none'; // Hide the card
+                        }
+                    });
+                });
+            });
         };
 
-        {% comment %} function initMap() {
+        /* function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 41.884110, lng: -87.671667 }, // Kaiser Tiger 
                 zoom: 77
@@ -145,7 +173,8 @@
                     infowindow.open(map, marker);
                 });
             });
-        } {% endcomment %}
+        } */
+        
     </script>
 </body>
 </html>
