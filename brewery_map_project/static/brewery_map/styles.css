@@ -8,8 +8,24 @@ body {
     grid-template-rows: minmax(2.5rem, 12vmin) 1fr 5rem;
 }
 pre {
-    font-size: max(0.2rem, 1vmin);
+    font-size: max(0.5rem, 1vmin);
    }
+
+/* Hide title art initially */
+.ascii-art {
+    padding-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .title {
     color: white;
@@ -25,8 +41,9 @@ pre {
 
 .main-title {
     margin-top: 20px;
-
 }
+
+
 
 
 
