@@ -34,6 +34,17 @@
     </div>
 </div>
 
+<div class="container-fluid card-container">
+    <div class="filter-options retro-font">
+        <button class="fill">Breakfast</button>
+        <button class="svg">Brunch</button>
+        <button class="fill">Lunch</button>
+        <button class="svg">Dinner</button>
+        <button class="fill">Pub/Brewery</button>
+        <button class="svg">Nightlife</button>
+    </div>
+</div>
+
  <div class="container-fluid card-container">	
     <div class="row justify-content-center">
         <div class="col-md-6 mx-auto">
@@ -44,11 +55,12 @@
               <h3 class="card-title"> {{ brewery.name }}</h3>
               <h5 class="card-title"> {{ brewery.neighborhood }}</h5>
               <p class="card-text">{{ brewery.address }}</p>
-              <p class="card-text">{{ brewery.category }}
-                {% if brewery.subcategory != 'N/A' %}
-                  ||  {{brewery.subcategory }}
-                {% endif %} 
-            </p>
+              <span class="card-text">
+                <p class="card-text pill-outline">{{ brewery.category }}</p>
+                    {% if brewery.subcategory != 'N/A' %}
+                    <p class="card-text pill-outline">{{brewery.subcategory}}</p>
+                    {% endif %} 
+              </span>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Known For: {{ brewery.knownfor }}</li>
@@ -72,6 +84,10 @@
         </div>
     </div>
 </div>
+
+<footer>
+    yolo lol
+</footer>
 
     <script>
         window.onload = function () {
