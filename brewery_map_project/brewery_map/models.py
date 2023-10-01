@@ -15,13 +15,12 @@ class Brewery(models.Model):
     yelp = models.URLField(max_length=200, default="https://www.yelp.com/")
     category = models.CharField(max_length=20, choices=[
         ("Cafe", 'Cafe'), 
-        ('Quick Eats', 'Quick Eats'), 
-        ('Cocktails 🍸', 'Cocktails 🍸'),
-        ('Fancy Dinner 🍽️', 'Fancy Dinner 🍽️'),
-        ('Casual Dinner 🍴', 'Casual Dinner 🍴'),
-        ('Pub 🍺', 'Pub 🍺'),
-        ('Brewery 🍺', 'Brewery 🍺'),
-        ('Brunch 🍳', 'Brunch 🍳'),
+        ('Breakfast', 'Breakfast'), 
+        ('Nightlife', 'Nightlife'),
+        ('Dinner', 'Dinner'),
+        ('Lunch', 'Lunch'),
+        ('Pub/Brewery', 'Pub/Brewery'),
+        ('Brunch', 'Brunch'),
         ],
         default="undefined")
     subcategory = models.CharField(max_length=20, choices=[
